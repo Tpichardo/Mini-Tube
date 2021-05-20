@@ -1,0 +1,8 @@
+li {
+  list-style: none;
+}
+
+.vidContainer {
+  display: grid;
+  grid-template-columns: 3;
+}

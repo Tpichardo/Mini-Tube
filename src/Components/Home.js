@@ -1,14 +1,13 @@
 import { Component } from "react";
 import axios from "axios";
-import Video from "./Video";
 import { Link } from "react-router-dom";
+import "./Home.css"
 
 class Home extends Component {
   constructor() {
     super();
     this.state = {
       input: "",
-      searchResults: "",
       videos: [],
     };
   }
@@ -22,7 +21,7 @@ class Home extends Component {
       const { data } = await axios.get(
         `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=${API_KEY}&type=video&q=${search}`
       );
-      console.log(data);
+
       this.setState({
         videos: data.items,
         input: "",
@@ -37,15 +36,16 @@ class Home extends Component {
   };
 
   render() {
-    const { input, searchResults, videos } = this.state;
+    const { input, videos } = this.state;
     const videoList = videos.map((video) => {
       return (
-        <Link to={`/videos/${video.id.videoId}`}>
-          <li key={video.id.videoId}>
+
+        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+          <li>
             <img
               src={video.snippet.thumbnails.default.url}
               style={{ height: "100px", width: "150px" }}
-              alt={video.snippet.title}
+              alt={video.snippet.description}
             />
             <h3>{video.snippet.title}</h3>
           </li>
@@ -64,7 +64,7 @@ class Home extends Component {
           />
           <button>Search</button>
         </form>
-        <section>
+        <section className="vidContainer">
           <ul>{videoList}</ul>
         </section>
       </div>
