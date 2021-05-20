@@ -1,7 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
-import Video from "./Video";
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 class Home extends Component {
   constructor() {
@@ -37,19 +37,21 @@ class Home extends Component {
   };
 
   render() {
-    const { input, searchResults, videos } = this.state;
+    const { input, videos } = this.state;
     const videoList = videos.map((video) => {
       return (
-        <Link to={`/videos/${video.id.videoId}`}>
-          <li key={video.id.videoId}>
-            <img
-              src={video.snippet.thumbnails.default.url}
-              style={{ height: "100px", width: "150px" }}
-              alt={video.snippet.title}
-            />
-            <h3>{video.snippet.title}</h3>
-          </li>
-        </Link>
+        <div className="VidContainer">
+          <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+            <li>
+              <img
+                src={video.snippet.thumbnails.default.url}
+                style={{ height: "100px", width: "150px" }}
+                alt={video.snippet.description}
+              />
+              <h3>{video.snippet.title}</h3>
+            </li>
+          </Link>
+        </div>
       );
     });
 
