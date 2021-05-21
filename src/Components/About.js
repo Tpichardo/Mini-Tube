@@ -5,17 +5,16 @@ const About = () => {
     <>
       <div className="about">
         <div className="youtube-about">
+          <h2>Project Description</h2>
+          <br />
           <p>
-            <h2>Project Description</h2> <br />
-            <br />
             Full stack Project of a basic Youtube clone using React and node.js
           </p>
         </div>
         <div className="Grace bio">
+          <h3>Grace Bong</h3>
+          <br />
           <p>
-            <h3>Grace Bong</h3>
-            <br />
-            <br />
             "Be proactive, not just reactive." -Me Creative, aspiring software
             engineer currently attending Pursuit, an intensive 12 month,
             project-based software engineering fellowship. As a diligent,
@@ -31,9 +30,9 @@ const About = () => {
           </p>
         </div>
         <div className="Talia bio">
+          <h3>Talía Picardo</h3> <br />
+          <br />
           <p>
-            <h3>Talía Picardo</h3> <br />
-            <br />
             As a rising fsw developer, I'm enjoying a new path to
             self-expression at Pursuit, an intensive 12 - month software
             engineering fellowship with a 9% acceptance rate. I love the process
@@ -53,9 +52,9 @@ const About = () => {
           </p>
         </div>
         <div className="Alvi bio">
+          <h3>Tamzeed Rahman (Alvi)</h3> <br />
+          <br />
           <p>
-            <h3>Tamzeed Rahman (Alvi)</h3> <br />
-            <br />
             I'm a full-stack developer studying at Pursuit, an intensive
             12-month software engineering fellowship with a 9% acceptance rate.
             Proficient in Javascript, HTML, CSS, Node, PostgreSQL, Redux.js,
