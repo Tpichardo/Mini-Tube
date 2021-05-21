@@ -8,10 +8,6 @@ li {
 
 .thumbnails {
   display: grid;
-<<<<<<< HEAD
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-=======
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-evenly;
 }
@@ -24,5 +20,4 @@ img {
 list-item {
   justify-content: center;
   align-items: center;
->>>>>>> 3c6ffcfeacd779c159017f4eb83a3fdfe44dba73
 }

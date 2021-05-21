@@ -64,13 +64,8 @@ class Home extends Component {
           />
           <button className="search btn">Search</button>
         </form>
-<<<<<<< HEAD
-        <section>
-          <ul>{videoList}</ul>
-=======
         <section className="vidContainer">
           <ul className="thumbnails">{videoList}</ul>
->>>>>>> 3c6ffcfeacd779c159017f4eb83a3fdfe44dba73
         </section>
       </div>
     );

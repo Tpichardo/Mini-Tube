@@ -32,7 +32,7 @@ const About = () => {
         </div>
         <div className="Talia bio">
           <p>
-            <h3>Talia Picardo</h3> <br />
+            <h3>Talía Picardo</h3> <br />
             <br />
             As a rising fsw developer, I'm enjoying a new path to
             self-expression at Pursuit, an intensive 12 - month software
