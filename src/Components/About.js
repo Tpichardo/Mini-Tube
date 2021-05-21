@@ -1,19 +1,20 @@
 import React from "react";
-
+import "./About.css";
 const About = () => {
   return (
     <>
       <div className="about">
         <div className="youtube-about">
           <p>
-            Project Description
+            <h2>Project Description</h2> <br />
             <br />
             Full stack Project of a basic Youtube clone using React and node.js
           </p>
         </div>
-        <div className="Grace">
+        <div className="Grace bio">
           <p>
-            Grace Bong
+            <h3>Grace Bong</h3>
+            <br />
             <br />
             "Be proactive, not just reactive." -Me Creative, aspiring software
             engineer currently attending Pursuit, an intensive 12 month,
@@ -29,9 +30,10 @@ const About = () => {
             to adopting a dragon. DM me if you have a dragon egg.
           </p>
         </div>
-        <div className="Talia">
+        <div className="Talia bio">
           <p>
-            Talia Picardo <br />
+            <h3>Talia Picardo</h3> <br />
+            <br />
             As a rising fsw developer, I'm enjoying a new path to
             self-expression at Pursuit, an intensive 12 - month software
             engineering fellowship with a 9% acceptance rate. I love the process
@@ -50,9 +52,10 @@ const About = () => {
             with family and friends, dancing to EVERYTHING, and bike riding.
           </p>
         </div>
-        <div className="Alvi">
+        <div className="Alvi bio">
           <p>
-            Tamzeed Rahman (Alvi) <br />
+            <h3>Tamzeed Rahman (Alvi)</h3> <br />
+            <br />
             I'm a full-stack developer studying at Pursuit, an intensive
             12-month software engineering fellowship with a 9% acceptance rate.
             Proficient in Javascript, HTML, CSS, Node, PostgreSQL, Redux.js,

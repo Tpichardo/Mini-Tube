@@ -8,7 +8,6 @@ class Home extends Component {
     super();
     this.state = {
       input: "",
-      searchResults: "",
       videos: [],
     };
   }
@@ -22,7 +21,7 @@ class Home extends Component {
       const { data } = await axios.get(
         `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=${API_KEY}&type=video&q=${search}`
       );
-      console.log(data);
+
       this.setState({
         videos: data.items,
         input: "",
@@ -40,34 +39,33 @@ class Home extends Component {
     const { input, videos } = this.state;
     const videoList = videos.map((video) => {
       return (
-        <div className="VidContainer">
-          <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-            <li>
-              <img
-                src={video.snippet.thumbnails.default.url}
-                style={{ height: "100px", width: "150px" }}
-                alt={video.snippet.description}
-              />
-              <h3>{video.snippet.title}</h3>
-            </li>
-          </Link>
-        </div>
+        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+          <li className="list-item">
+            <img
+              src={video.snippet.thumbnails.default.url}
+              style={{ height: "100px", width: "150px" }}
+              alt={video.snippet.description}
+            />
+            <h3>{video.snippet.title}</h3>
+          </li>
+        </Link>
       );
     });
 
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className="search" onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
             value={input}
             type="text"
             placeholder="search..."
+            className="search"
           />
-          <button>Search</button>
+          <button className="search btn">Search</button>
         </form>
-        <section>
-          <ul>{videoList}</ul>
+        <section className="vidContainer">
+          <ul className="thumbnails">{videoList}</ul>
         </section>
       </div>
     );

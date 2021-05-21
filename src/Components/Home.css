@@ -2,6 +2,22 @@ li {
   list-style: none;
 }
 
-.VidContainer {
+.search {
+  width: 100%;
+}
+
+.thumbnails {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-evenly;
+}
+
+img {
+  height: 150px;
+  width: 250px;
+}
+
+list-item {
+  justify-content: center;
+  align-items: center;
 }

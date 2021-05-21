@@ -8,12 +8,17 @@ const NavBar = () => {
       <nav>
         <Link to="/">
           <img
-            src="https://i.pinimg.com/originals/ad/8e/5f/ad8e5f82820190e47acd691f3d21d725.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
             alt="youtube icon"
-            style={{ height: "50px", width: "50px" }}
+            style={{ height: "100px", width: "200px" }}
           />
         </Link>
-        <Link to="/">Home</Link> <Link to="/about">About</Link>
+        <Link className="button blue" to="/">
+          Home
+        </Link>{" "}
+        <Link className="button blue" to="/about">
+          About
+        </Link>
       </nav>
     </div>
   );
