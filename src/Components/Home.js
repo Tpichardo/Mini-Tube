@@ -1,7 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./Home.css"
+import "./Home.css";
 
 class Home extends Component {
   constructor() {
@@ -40,7 +40,7 @@ class Home extends Component {
     const videoList = videos.map((video) => {
       return (
         <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-          <li>
+          <li className="list-item">
             <img
               src={video.snippet.thumbnails.default.url}
               style={{ height: "100px", width: "150px" }}
@@ -54,17 +54,23 @@ class Home extends Component {
 
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className="search" onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
             value={input}
             type="text"
             placeholder="search..."
+            className="search"
           />
-          <button>Search</button>
+          <button className="search btn">Search</button>
         </form>
+<<<<<<< HEAD
         <section>
           <ul>{videoList}</ul>
+=======
+        <section className="vidContainer">
+          <ul className="thumbnails">{videoList}</ul>
+>>>>>>> 3c6ffcfeacd779c159017f4eb83a3fdfe44dba73
         </section>
       </div>
     );

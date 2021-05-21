@@ -1,4 +1,20 @@
 nav {
   display: flex;
   justify-content: space-around;
+  background-color: red;
+}
+.button {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3c93d5;
 }
