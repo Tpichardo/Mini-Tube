@@ -39,7 +39,6 @@ class Home extends Component {
     const { input, videos } = this.state;
     const videoList = videos.map((video) => {
       return (
-
         <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
           <li>
             <img
@@ -64,7 +63,7 @@ class Home extends Component {
           />
           <button>Search</button>
         </form>
-        <section className="vidContainer">
+        <section>
           <ul>{videoList}</ul>
         </section>
       </div>
