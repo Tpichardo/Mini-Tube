@@ -28,6 +28,7 @@ const About = () => {
             ranting about inefficient systems and inefficiency in general. Open
             to adopting a dragon. DM me if you have a dragon egg.
           </p>
+          <a href="https://github.com/bongster91">Github.com/GraceBong</a>
         </div>
         <div className="Talia bio">
           <h3>Talía Picardo</h3> <br />
@@ -50,6 +51,7 @@ const About = () => {
             what they love. When I'm not coding you can find me spending time
             with family and friends, dancing to EVERYTHING, and bike riding.
           </p>
+          <a href="https://github.com/Tpichardo">Github.com/TalíaPicardo</a>
         </div>
         <div className="Alvi bio">
           <h3>Tamzeed Rahman (Alvi)</h3> <br />
@@ -72,6 +74,9 @@ const About = () => {
             important. In the work setting, people describe me as dedicated,
             reliable, and results-driven.
           </p>
+          <a href="https://github.com/TamzeedRahman">
+            Github.com/TamzeedRahman
+          </a>
         </div>
       </div>
     </>
