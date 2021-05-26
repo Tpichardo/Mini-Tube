@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -26,8 +26,8 @@ class Home extends Component {
         videos: data.items,
         input: "",
       });
-    } catch {
-      console.log("error");
+    } catch (e) {
+      console.log(e);
     }
   };
 

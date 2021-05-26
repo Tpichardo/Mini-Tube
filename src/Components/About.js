@@ -1,8 +1,9 @@
 import React from "react";
+import GitHubIcon from '@material-ui/icons/GitHub';
 import "./About.css";
 const About = () => {
   return (
-    <>
+    <div>
       <div className="about">
         <div className="youtube-about">
           <h2>Project Description</h2>
@@ -13,6 +14,7 @@ const About = () => {
         </div>
         <div className="Grace bio">
           <h3>Grace Bong</h3>
+          <GitHubIcon onClick={() => window.open('https://github.com/bongster91')} />
           <br />
           <p>
             "Be proactive, not just reactive." -Me Creative, aspiring software
@@ -28,10 +30,10 @@ const About = () => {
             ranting about inefficient systems and inefficiency in general. Open
             to adopting a dragon. DM me if you have a dragon egg.
           </p>
-          <a href="https://github.com/bongster91">Github.com/GraceBong</a>
         </div>
         <div className="Talia bio">
           <h3>Talía Picardo</h3> <br />
+          <GitHubIcon onClick={() => window.open('https://github.com/Tpichardo')} />
           <br />
           <p>
             As a rising fsw developer, I'm enjoying a new path to
@@ -51,10 +53,10 @@ const About = () => {
             what they love. When I'm not coding you can find me spending time
             with family and friends, dancing to EVERYTHING, and bike riding.
           </p>
-          <a href="https://github.com/Tpichardo">Github.com/TalíaPicardo</a>
         </div>
         <div className="Alvi bio">
           <h3>Tamzeed Rahman (Alvi)</h3> <br />
+          <GitHubIcon onClick={() => window.open('https://github.com/TamzeedRahman')} />
           <br />
           <p>
             I'm a full-stack developer studying at Pursuit, an intensive
@@ -74,12 +76,9 @@ const About = () => {
             important. In the work setting, people describe me as dedicated,
             reliable, and results-driven.
           </p>
-          <a href="https://github.com/TamzeedRahman">
-            Github.com/TamzeedRahman
-          </a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
