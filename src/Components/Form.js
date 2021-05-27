@@ -5,6 +5,7 @@ const Form = ({ handleSubmit, handleChange }) => {
         <div>
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type='text' placeholder="leave a comment" />
+                <button>Submit</button>
             </form>
         </div>
     )
