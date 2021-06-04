@@ -1,5 +1,5 @@
 import React from "react";
-import ReactPlayer from "react-player/youtube";
+import YouTube from 'react-youtube'
 import { v4 as uuid } from "uuid";
 import Comment from "./Comment";
 import Form from "./Form";
@@ -37,7 +37,7 @@ class Video extends React.Component {
 
   render() {
     const { comments } = this.state;
-    const listItem = comments.map((comment) => {
+    const commentList = comments.map((comment) => {
       return (
         <Comment
           comment={comment}
@@ -51,14 +51,15 @@ class Video extends React.Component {
     return (
       <div>
         <div className="onevideo">
-          <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} />
+          <YouTube videoId={`${id}`} />
         </div>
         <Form
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
           className="Comment"
         />
-        <ul>{listItem}</ul>
+        <h3>Comments:</h3>
+        <ul>{commentList}</ul>
       </div>
     );
   }

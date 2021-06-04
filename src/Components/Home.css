@@ -23,3 +23,8 @@ list-item {
   justify-content: center;
   align-items: cent;
 }
+
+.vidContainer {
+  text-align: center;
+  margin-top: 20px;
+}

@@ -9,6 +9,7 @@ class Home extends Component {
     this.state = {
       input: "",
       videos: [],
+      message: 'no videos'
     };
   }
 
@@ -19,7 +20,7 @@ class Home extends Component {
 
     try {
       const { data } = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&key=${API_KEY}&type=video&q=${search}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&key=${API_KEY}&type=video&q=${search}`
       );
 
       this.setState({
@@ -28,6 +29,9 @@ class Home extends Component {
       });
     } catch (e) {
       console.log(e);
+      this.setState({
+        message: 'no videos'
+      })
     }
   };
 
@@ -36,7 +40,7 @@ class Home extends Component {
   };
 
   render() {
-    const { input, videos } = this.state;
+    const { input, videos, message } = this.state;
     const videoList = videos.map((video) => {
       return (
         <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
@@ -65,6 +69,7 @@ class Home extends Component {
           <button className="search btn">Search</button>
         </form>
         <section className="vidContainer">
+          {videoList.length === 0 && message}
           <ul className="thumbnails">{videoList}</ul>
         </section>
       </div>
