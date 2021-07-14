@@ -1,6 +1,7 @@
 import React from "react";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import "./About.css";
+
 const About = () => {
   return (
     <div>
