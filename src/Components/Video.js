@@ -50,7 +50,7 @@ class Video extends React.Component {
     const { id } = this.props.match.params;
     return (
       <div>
-        <div className="onevideo">
+        <div className="oneVideo">
           <YouTube videoId={`${id}`} />
         </div>
         <Form
