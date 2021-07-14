@@ -3,7 +3,7 @@ import "./Form.css";
 
 const Form = ({ handleSubmit, handleChange }) => {
   return (
-    <div className="formcomment">
+    <div className="formComment">
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
