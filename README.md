@@ -3,7 +3,7 @@
 We built a YouTube clone using the YouTube API to display a list of videos based on the user's input. The user can also select a desired video to watch! 
 <br/>
 <br/>
-it's just like YouTube! minus a lot of stuff.
+It's just like YouTube! minus a lot of stuff. 😜
 
 
 ![YouTube Clone Gif](YouTube-Clone.gif)
