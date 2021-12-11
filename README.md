@@ -1,4 +1,4 @@
-# YouTube Clone 🎥
+# Mini-Tube 🎥
 
 We built a YouTube clone using the YouTube API to display a list of videos based on the user's input. The user can also select a desired video to watch! 
 <br/>
