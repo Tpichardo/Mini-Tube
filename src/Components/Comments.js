@@ -10,13 +10,13 @@ class Comments extends React.Component {
         comments: []
     }
 
-    handleCommentChange = (e) => {
+    handleComment = (e) => {
         this.setState({
             comment: e.target.value
         })
     }
 
-    handleuserNameChange = (e) => {
+    handleUserName = (e) => {
         this.setState({
             userName: e.target.value
         })
@@ -47,11 +47,11 @@ class Comments extends React.Component {
     render() {
         const { comments } = this.state
         const commentList = comments.map(comment => {
-            return <Comment comment={comment} remove={this.remove} key={comment.key} />
+            return <Comment comment={comment} handleDelete={this.handleDelete} key={comment.key} />
         })
         return (
             <div>
-                <CommentForm handleSubmit={this.handleSubmit} handleCommentChange={this.handleCommentChange} handleuserNameChange={this.handleuserNameChange} />
+                <CommentForm handleSubmit={this.handleSubmit} handleComment={this.handleComment} handleUserName={this.handleUserName} />
                 <ul>
                     {commentList}
                 </ul>

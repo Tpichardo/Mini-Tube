@@ -2,12 +2,11 @@ import React from "react";
 
 class Comment extends React.Component {
   render() {
-    const { comment, remove } = this.props;
+    const { comment, handleDelete } = this.props;
     return (
       <li className="comment">
-        {comment.userName}
-        {comment.text}
-        <button onClick={() => remove(comment.id)}>Delete</button>
+        {comment.userName}: {comment.text}
+        <button onClick={() => handleDelete(comment.id)}>Delete</button>
       </li>
     );
   }
