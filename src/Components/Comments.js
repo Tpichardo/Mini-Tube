@@ -24,7 +24,7 @@ class Comments extends React.Component {
 
 
     handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         const newComment = {
             id: uuid(),
             userName: this.state.userName,
@@ -45,13 +45,13 @@ class Comments extends React.Component {
 
 
     render() {
-        const { comments } = this.state
+        const { comments, userName, comment } = this.state
         const commentList = comments.map(comment => {
             return <Comment comment={comment} handleDelete={this.handleDelete} key={comment.key} />
         })
         return (
             <div>
-                <CommentForm handleSubmit={this.handleSubmit} handleComment={this.handleComment} handleUserName={this.handleUserName} />
+                <CommentForm userName={userName} comment={comment} handleSubmit={this.handleSubmit} handleComment={this.handleComment} handleUserName={this.handleUserName} />
                 <ul>
                     {commentList}
                 </ul>
