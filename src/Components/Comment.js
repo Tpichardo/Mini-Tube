@@ -5,7 +5,7 @@ class Comment extends React.Component {
     const { comment, remove } = this.props;
     return (
       <li className="comment">
-        {comment.name}
+        {comment.userName}
         {comment.text}
         <button onClick={() => remove(comment.id)}>Delete</button>
       </li>

@@ -10,24 +10,34 @@ class Comments extends React.Component {
         comments: []
     }
 
-    handleChange = (e) => {
+    handleCommentChange = (e) => {
         this.setState({
             comment: e.target.value
         })
     }
 
+    handleuserNameChange = (e) => {
+        this.setState({
+            userName: e.target.value
+        })
+    }
+
+
     handleSubmit = (e) => {
         e.preventDefault()
         const newComment = {
             id: uuid(),
+            userName: this.state.userName,
             text: this.state.comment
         }
         this.setState({
+            userName: '',
+            comment: '',
             comments: [...this.state.comments, newComment]
         })
     }
 
-    remove = (id) => {
+    handleDelete = (id) => {
         this.setState({
             comments: this.state.comments.filter((newComment) => newComment.id !== id)
         })
@@ -41,7 +51,7 @@ class Comments extends React.Component {
         })
         return (
             <div>
-                <CommentForm handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
+                <CommentForm handleSubmit={this.handleSubmit} handleCommentChange={this.handleCommentChange} handleuserNameChange={this.handleuserNameChange} />
                 <ul>
                     {commentList}
                 </ul>
