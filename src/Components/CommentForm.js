@@ -1,5 +1,5 @@
 import React from "react";
-import "./Form.css";
+import "./CommentForm.css";
 
 class CommentForm extends React.Component {
   render() {
@@ -13,13 +13,14 @@ class CommentForm extends React.Component {
             value={userName}
             onChange={handleUserName}
             placeholder="Name"
+            className="formName"
           />
           <textarea
             value={comment}
             onChange={handleComment}
             placeholder="Add a comment"
           />
-          <button type='submit'>Submit</button>
+          <button className='formbtn' type='submit'>COMMENT</button>
         </form>
       </div>
     )

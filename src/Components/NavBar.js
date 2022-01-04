@@ -13,7 +13,7 @@ const NavBar = () => {
           style={{ height: "100px", width: "200px" }}
         />
       </Link>
-      <Link className="button blue" to="/about">
+      <Link className="navabout" to="/about">
         About
       </Link>
     </nav>
