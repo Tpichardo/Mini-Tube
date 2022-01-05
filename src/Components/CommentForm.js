@@ -1,10 +1,9 @@
 import React from "react";
-import "./CommentForm.css";
+// import "./CommentForm.css";
 
 class CommentForm extends React.Component {
   render() {
     const { handleUserName, handleComment, handleSubmit, userName, comment } = this.props
-    console.log(handleUserName)
     return (
       <div>
         <h1>Comments:</h1>
@@ -20,7 +19,7 @@ class CommentForm extends React.Component {
             onChange={handleComment}
             placeholder="Add a comment"
           />
-          <button className='formbtn' type='submit'>COMMENT</button>
+          <button className='form btn' type='submit'>COMMENT</button>
         </form>
       </div>
     )

@@ -1,15 +1,15 @@
 import React from "react";
 import GitHubIcon from '@material-ui/icons/GitHub';
-import "./About.css";
+// import "./About.css";
 
 const About = () => {
   return (
     <div>
       <div className="about">
         <div className="youTube-about">
-          <br />
+
           <h2>Project Description</h2>
-          <br />
+
           <p>
             Full stack Project of a basic Youtube clone using React and node.js
           </p>
@@ -17,7 +17,7 @@ const About = () => {
         <div className="Grace bio">
           <h3>Grace Bong</h3>
           <GitHubIcon onClick={() => window.open('https://github.com/bongster91')} />
-          <br />
+
           <p>
             "Be proactive, not just reactive." -Me Creative, aspiring software
             engineer currently attending Pursuit, an intensive 12 month,
@@ -36,21 +36,17 @@ const About = () => {
         <div className="Talia bio">
           <h3>Talía Picardo</h3> <br />
           <GitHubIcon onClick={() => window.open('https://github.com/Tpichardo')} />
-          <br />
+
           <p>
-            As a rising fsw developer, I'm enjoying a new path to
-            self-expression at Pursuit, an intensive 12 - month software
-            engineering fellowship with a 9% acceptance rate. I love the process
-            of creating clean code and discovering different ways to get the
+            I'm enjoying a new path to self-expression at Pursuit, an intensive 12 - month
+            software engineering fellowship with a 9% acceptance rate. I love the process
+            of creating through code and discovering different ways to get the
             same result. I have learned through pair programming that the beauty
             of coding lies in the spaces it creates for collaboration. We all
             think differently, and software development encourages these
-            differences and makes them work together to create amazing outcomes.
-            Looking forward to the future keeps me motivated to constantly
-            improve upon my skills and learn new ones. I'm currently proficient
-            in Javascript, HTML, CSS, Node, and GitHub. I aspire to work with an
-            organization that shares my values to motivate and entertain my
-            community. As a developer, I want to be able to merge this drive
+            differences and makes them work together to create amazing outcomes!
+            I aspire to work with an organization that shares my values to motivate
+            and entertain my community. As a developer, I want to be able to merge this drive
             into my initiatives to create code that inspires the community to do
             what they love. When I'm not coding you can find me spending time
             with family and friends, dancing to EVERYTHING, and bike riding.
@@ -59,7 +55,7 @@ const About = () => {
         <div className="Alvi bio">
           <h3>Tamzeed Rahman (Alvi)</h3> <br />
           <GitHubIcon onClick={() => window.open('https://github.com/TamzeedRahman')} />
-          <br />
+
           <p>
             I'm a full-stack developer studying at Pursuit, an intensive
             12-month software engineering fellowship with a 9% acceptance rate.

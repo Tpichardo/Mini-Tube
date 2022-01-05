@@ -47,7 +47,11 @@ class Comments extends React.Component {
     render() {
         const { comments, userName, comment } = this.state
         const commentList = comments.map(comment => {
-            return <Comment comment={comment} handleDelete={this.handleDelete} key={comment.key} />
+            return (
+                <li>
+                    <Comment comment={comment} handleDelete={this.handleDelete} key={comment.key} />
+                </li>
+            )
         })
         return (
             <div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./Home.css";
+// import "./Home.css";
 
 class Home extends Component {
   constructor() {
@@ -68,9 +68,11 @@ class Home extends Component {
           />
           <button className="search btn">Search</button>
         </form>
-        <section className="vidContainer">
+        <section className="vid-container">
           {videoList.length === 0 && message}
-          <ul className="thumbnails">{videoList}</ul>
+          <ul className="thumbnails">
+            {videoList}
+          </ul>
         </section>
       </div>
     );

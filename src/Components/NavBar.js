@@ -9,11 +9,11 @@ const NavBar = () => {
       <Link to='/'>
         <img
           src={YouTube_Logo}
-          alt="youtube icon"
-          style={{ height: "100px", width: "200px" }}
+          alt="YouTube Logo"
+          className='nav-logo'
         />
       </Link>
-      <Link className="navabout" to="/about">
+      <Link className="nav-about" to="/about">
         About
       </Link>
     </nav>
