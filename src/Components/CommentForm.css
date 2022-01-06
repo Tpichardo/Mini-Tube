@@ -1,13 +1,19 @@
-.formbtn {
-  margin-top: 0.5%;
-  background-color: red;
-  border-radius: 5px;
-  height: 30px;
-  font-weight: bold;
+.form-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .formName {
   display: block;
+  font-size: 16px;
   margin-bottom: 0.7%;
 }
 
@@ -19,4 +25,5 @@ textarea {
   height: 75px;
   width: 350px;
   display: block;
+  font-size: 16px;
 }
