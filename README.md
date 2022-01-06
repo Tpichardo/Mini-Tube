@@ -8,6 +8,8 @@ We built a small YouTube application using the YouTube API to display a list of 
 It's just like YouTube! minus a lot of stuff! 😜
 
 
-![YouTube Clone Gif](MarioHome.gif)
+![Mini-Tube Gif](MarioHome.gif)
+
+![Mini-Tube Gif](MarioComment.gif)
 
 
