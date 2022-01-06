@@ -1,16 +1,37 @@
-nav {
-  display: flex;
-  justify-content: space-between;
+header {
+  padding: 1em 0;
   background-color: red;
 }
 
-.nav-logo {
-  height: 20px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-/* .navabout {
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav-item + .nav-item {
+  margin-left: 1em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  width: 50%;
+  height: auto;
+}
+.navlink {
   text-decoration: none;
-  margin-top: 2.3%;
-  color: rgb(40, 40, 40);
-  font-size: 40px;
-  font-weight: bold;
-} */
+  color: #282828;
+  font-size: 1.14rem;
+}

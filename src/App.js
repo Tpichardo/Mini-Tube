@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBar from "./Components/NavBar";
+import Navbar from "./Components/Navbar";
 import About from "./Components/About";
 import Home from "./Components/Home";
 import { Switch, Route } from "react-router-dom";
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <NavBar />
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/videos/:id" component={Video} />
