@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import YouTube_Logo from '../Assets/YouTube_Logo.svg'
-import "./Navbar.css";
+import "./NavBar.css";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <header>
       <div className="container row">
@@ -29,4 +29,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
