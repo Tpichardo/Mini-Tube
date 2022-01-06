@@ -35,3 +35,7 @@ nav {
   color: #282828;
   font-size: 1.14rem;
 }
+
+.navlink:hover {
+  font-weight: bold;
+}

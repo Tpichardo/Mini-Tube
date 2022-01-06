@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import "./Home.css";
+import search from '../Assets/search.svg'
+import "./Home.css";
 
 class Home extends Component {
   constructor() {
@@ -20,7 +21,7 @@ class Home extends Component {
 
     try {
       const { data } = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&key=${API_KEY}&type=video&q=${search}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=16&key=${API_KEY}&type=video&q=${search}`
       );
 
       this.setState({
@@ -43,34 +44,36 @@ class Home extends Component {
     const { input, videos, message } = this.state;
     const videoList = videos.map((video) => {
       return (
-        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-          <li className="list-item">
+        <Link className="video-link" to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+          <li className="video-list-item">
             <img
               src={video.snippet.thumbnails.default.url}
-              style={{ height: "100px", width: "150px" }}
               alt={video.snippet.description}
+              className="thumbnail"
             />
-            <h3>{video.snippet.title}</h3>
+            <h2 className="video-title">{video.snippet.title}</h2>
           </li>
         </Link>
       );
     });
 
     return (
-      <div>
-        <form className="search" onSubmit={this.handleSubmit}>
-          <input
-            onChange={this.handleChange}
-            value={input}
-            type="text"
-            placeholder="search..."
-            className="search"
-          />
-          <button className="search btn">Search</button>
-        </form>
+      <div className='home'>
+        <section className="search-form">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              onChange={this.handleChange}
+              value={input}
+              type="text"
+              placeholder="search..."
+              className="search"
+            />
+            <input type="image" src={search} alt="search icon" className="search-btn" />
+          </form>
+        </section>
         <section className="vid-container">
           {videoList.length === 0 && message}
-          <ul className="thumbnails">
+          <ul className="video-list">
             {videoList}
           </ul>
         </section>
